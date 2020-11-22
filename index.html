@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ján Priner - Ročníkový projekt</title>
+        <style type="text/css">
+            body{
+                margin: 40px auto;
+                max-width: 650px;
+                line-height: 1.4;
+                font-size: 18px;
+                text-align: justify;
+                padding: 0 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Ročníkový projekt</h1>
+        </header>
+        <p>
+            <strong>Študent:</strong><br>
+            Ján Priner &lt;<a href="mailto:priner2@uniba.sk">priner2@uniba.sk</a>&gt;
+        </p>
+        <p>
+            <strong>Zadávateľ projektu:</strong><br>
+            doc. Dr. Tomáš Plachetka
+            &lt;<a href="mailto:plachetk@dcs.fmph.uniba.sk">plachetk@dcs.fmph.uniba.sk</a>&gt;
+        </p>
+        <p>
+            <strong>Názov projektu:</strong><br>
+            Solver šachových problémov
+        </p>
+        <p>
+            <h2>Špecifikácia projektu:</h2>
+            Implementovať v Jave program, ktorý rieši šachové problémy typu
+            "selfmate in N moves"
+            <a href="https://en.wikipedia.org/wiki/Selfmate">https://en.wikipedia.org/wiki/Selfmate</a>
+            a "helpmate in N moves"
+            <a href="https://en.wikipedia.org/wiki/Helpmate">https://en.wikipedia.org/wiki/Helpmate</a>.
+            Program má nájsť všetky riešenia daného problému (t.j. všetky prve
+            ťahy, ktoré vedú k riešeniu) podľa oficiálnych pravidiel šachu,
+            <a href="https://en.wikipedia.org/wiki/Rules_of_chess">https://en.wikipedia.org/wiki/Rules_of_chess</a>.
+
+            Na vstupe program prečíta jeden riadok X-FEN. Každý výstupný riadok je
+            X-FEN popisujúci jedno riešenie vstupného problému
+            (<a href="https://en.wikipedia.org/wiki/X-FEN">https://en.wikipedia.org/wiki/X-FEN</a>,
+            <a href="https://en.wikipedia.org/wiki/Forsyth–Edwards_Notation">https://en.wikipedia.org/wiki/Forsyth–Edwards_Notation</a>).
+            Počet výstupných riadkov je počet riešení vstupného problému.
+            Ak daný problém nemá riešenie do N ťahov, tak výstup je prázdny.
+            Ak sa daný problém dá vyriešiť za X ťahov, kde X&lt;N, za FEN v príslušnom
+            riadku výstupu je text "solved in X moves".
+            Posledné 2 integerové záznamy vo vstupnom X-FEN majú v tomto projekte
+            nasledujúcu neštandardnú interpretáciu (zvyšok je podľa štandardu):
+            <ul>
+            <li>Záznam 5 (štandardne používaný pre halfmove clock) má hodnotu 100 pre
+            problém typu selfmate; a hodnotu 101 pre problém typu helpmate.</li>
+            <li>Záznam 6 (štandardne používaný pre fullmove number) je počet ťahov do
+            matu, t.j. N v "selfmate in N moves" resp. "helpmate in N moves".</li>
+            </ul>
+        </p>
+    </body>
+</html>
