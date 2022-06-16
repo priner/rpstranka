@@ -1,0 +1,43 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{csquotes}
+\usepackage[slovak]{babel}
+
+\title{
+    Ročníkový projekt \\
+    \large Report za letný semester
+}
+\author{Ján Priner}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+Vymenil som SAT solver knižnicu lingeling za knižnicu glucose. Tú je možné
+skompilovať aj pre Windows. Bolo treba vykonať ešte niekoľko drobných zmien
+aby celý program fungoval na systéme Windows (cez cygwin).
+
+Sprehľadnil som vypisovanie výsledkov:
+\begin{itemize}
+\item
+Farby sú teraz pomenované tak, že vrcholy tetrahédra sú pomenované 1, 2, 3, 4
+a hrany podľa koncových vrcholov 12, 13, 14, 23, 24, 34 namiesto pôvodného
+neprehľadného označenia, kde farby boli iba očíslované od 0 po 9.
+\item
+Pri vypisovaní prechodov multipólu Štvorice farieb ktoré sú ekvivalentné
+už nevypisujeme dvakrát (ekvivalentné sú ak sa dajú prečíslovať vrcholy
+tetraéderu tak aby boli rovnaké)
+\end{itemize}
+
+Vytvoril som tiež nástroj, ktorý skúma snarky z ktorých bol odstránený
+5-cyklus (teda mu zostalo 5 visiacich hrán). Program skúma to, že keď ten
+zvyšok grafu zafarbíme tetraedrálnou Steinerovskou konfiguráciou, aké
+pätice sú prípustné na visiacich hranách. Ako aj ostatné nástroje aj tento
+úlohu rieši pomocou SAT solvera.
+
+Päticu ktoré vieme dostať z inej prečíslovaním
+vrcholov tetrahédra, alebo cyklickou rotáciou pätice, alebo prevrátením pätice
+považujeme za totožné a vypisujeme iba raz. Naviac o každej pätici program
+vypíše či je pentagonálna, pentagramálna, alebo adverzná.
+
+\end{document}

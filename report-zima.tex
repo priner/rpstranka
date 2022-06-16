@@ -1,0 +1,33 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{csquotes}
+\usepackage[slovak]{babel}
+
+\title{
+    Ročníkový projekt \\
+    \large Report za zimný semester
+}
+\author{Ján Priner}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Čo som spravil ja}
+
+Vytvoril som triedy solverov (pre helpmate a selfmate), a v nich implementoval
+rekurzívne prehľadávanie stavov hry. Triedu SolverFactory ktorá z FENu vytvorí
+inštanciu solvera (časť parsovania FENu implementovaná už v engine).
+Načítavanie vstupu a vypisovanie výstupu.
+
+\section{Limitácie/priestor na zlepšenie}
+
+Program v súčasnosti zvláda riešiť problémy \enquote{selfmate in n moves}
+a \enquote{helpmate in n moves} iba pre veľmi malé $n$ ($\leq 3$). Je to hlavne
+preto, že prehľadávaný priestor je nesmierne veľký. V jednom ťahu si hráč
+zvyčajne vyberá z okolo 30 ťahov, to pre $n=3$ je okolo $10^9$ stavov.
+
+Niektoré veci by sa dali lepšie zoptimalizovať. Tiež by sme v budúcnosti mohli
+na zrýchlenie prehľadávania využiť multithreading.
+
+\end{document}
